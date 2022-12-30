@@ -9,7 +9,7 @@
     <p>投稿者:{{ object.author }}</p>
     <p><img src="{{ object.sns_image.url }}" width="300" /></p>
     <a
-      href="#"
+      href="{% url 'good' object.pk %}"
       class="btn btn-primary"
       tabindex="-1"
       role="button"
@@ -17,7 +17,7 @@
       >いいねする</a
     >
     <a
-      href="#"
+      href="{% url 'read' object.pk %}"
       class="btn btn-secondary"
       tabindex="-1"
       role="button"
